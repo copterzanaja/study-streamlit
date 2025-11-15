@@ -52,9 +52,9 @@ if st.button("กดเพื่อแสดงผล"):
     else:
         st.write("ผลการทำนาย knn : เป็น")
     if y_pred_svm == 0:
-        st.write("ผลการทำนาย knn : ไม่เป็น")
+        st.write("ผลการทำนาย svm : ไม่เป็น")
     else:
-        st.write("ผลการทำนาย knn : เป็น")
+        st.write("ผลการทำนาย svm : เป็น")
  
 
 
@@ -65,3 +65,4 @@ st.write("acc_knn :",acc_knn)
 acc_svm = model_svm["accuracy"]
 
 st.write("acc_svm :",acc_svm)
+

@@ -47,12 +47,21 @@ if st.button("กดเพื่อแสดงผล"):
     y_pred_knn = knn.predict(x_pred)
     y_pred_svm = svm.predict(x_pred)
 
-    st.write("ผลการทำนาย knn :", y_pred_knn[0])
-    st.write("ผลการทำนาย svm :", y_pred_svm[0])
+    if y_pred_knn == 0:
+        st.write("ผลการทำนาย knn : ไม่เป็น")
+    else:
+        st.write("ผลการทำนาย knn : เป็น")
+    if y_pred_svm == 0:
+        st.write("ผลการทำนาย knn : ไม่เป็น")
+    else:
+        st.write("ผลการทำนาย knn : เป็น")
+ 
+
 
 #accuracy model
 acc_knn = model_knn["accuracy"]
 st.write("acc_knn :",acc_knn)
 
 acc_svm = model_svm["accuracy"]
+
 st.write("acc_svm :",acc_svm)
